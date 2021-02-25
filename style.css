@@ -25,6 +25,13 @@ h2 {
     text-align: center;
 }
 
+/* How to take the quiz */
+p {
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+    font-size: 150%;
+}
+
 /* Button for "Start Quiz" */
 button {
     font-family: 'Architects Daughter', cursive;
