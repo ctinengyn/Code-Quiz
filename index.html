@@ -11,31 +11,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fredoka+One&display=swap"
         rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fredoka+One&family=Handlee&display=swap"
-        rel="stylesheet">
-
-
     <link rel="stylesheet" href="style.css">
 </head>
+
+<!-- Navigation bar for High Score and Time Left -->
+<div id="nav">
+    <h1>Highscore:</h1>
+    <h1>Time: <span id="timeLeft">0</span></h1>
+</div>
 
 <body>
     <!-- Coding Quiz Challenge Title -->
     <header class="header">
-        <h1>Coding Quiz</h1>
-        <h2>Challenge</h2>
+        <h2>Coding Quiz</h2>
     </header>
-    <main>
-        <div class="box"></div>
-        <div class="container"></div>
-    </main>
+
     <!-- Start Button -->
-    <div class="button1">
-        <div class="button-body">
-            <button class="start-button">Start Quiz</button>
-        </div>
+    <div id="buttonBody">
+        <button onclick="start()">Start Quiz</button>
     </div>
 
     <script src="script.js"></script>

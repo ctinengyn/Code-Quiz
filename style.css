@@ -1,47 +1,39 @@
+/* Background color baby pink */
 body {
     background-color: #ffe6ee;
 }
 
+/* Navigation bar */
+#nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    width: 100%;
+}
+
 h1 {
+    font-family: 'Architects Daughter', cursive;
+    font-family: 'Fredoka One', cursive; 
+    color: #ffe6ee
+}
+
+/* "Coding Quiz" font */
+h2 {
     font-family: 'Architects Daughter', cursive;
     font-family: 'Fredoka One', cursive;
     font-size: 500%;
     text-align: center;
 }
 
-h2 {
+/* Button for "Start Quiz" */
+button {
     font-family: 'Architects Daughter', cursive;
     font-family: 'Fredoka One', cursive;
-    font-family: 'Handlee', cursive;
-    font-size: 400%;
-    text-align: center;
-    transform: rotate(-10deg);
-    margin-right: -15%;
-    margin-top: -5%;
-}
-
-.box {
-    display: flex;
-    background-color: rgba(192,192,192,0.3);
-}
-
-.container {
-    flex: 1;
-    padding: 15%;
-    order: 2;
-}
-
-button {
     background-color: black;
-    border-radius: 20%;
     font-size: 300%;
-    
+    color: #ffe6ee;
 }
 
-.button1 {
-    text-align: center;
-}
-
-.button-body {
+#buttonBody {
     text-align: center;
 }
