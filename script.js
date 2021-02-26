@@ -25,3 +25,33 @@ var questions = [{
     answer: 'Console.log()'
     }
 ]
+
+// Varibles for functions, scores and timers
+var score = 0;
+var timer;
+var timeLeft = 0;
+var thinkingAnswer = -1;
+
+// The button has an on-click event handler
+function start () {
+
+    timeLeft = 120; // seconds
+    document.getElementById('timeLeft').innerHTML = timeLeft;
+
+        // setInterval is a built-in function that will call the given function
+    timer = setInterval(function() {
+        
+        timeLeft--;
+        document.getElementById('timeLeft').innerHTML = timeLeft;
+
+        // End game when timer is below 0
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            endGame();
+        }
+
+        // Every N milliseconds (1 second = 1000 ms)
+    }, 1000);
+
+    next();
+}
