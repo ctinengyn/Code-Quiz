@@ -11,17 +11,18 @@ body {
     width: 100%;
 }
 
-h1 {
+#h4 {
     font-family: 'Architects Daughter', cursive;
     font-family: 'Fredoka One', cursive; 
-    color: #ffe6ee
+    color: #ffe6ee;
+    font-size: 230%;
 }
 
 /* "Coding Quiz" font */
 h2 {
     font-family: 'Architects Daughter', cursive;
     font-family: 'Fredoka One', cursive;
-    font-size: 500%;
+    font-size: 300%;
     text-align: center;
 }
 
@@ -32,13 +33,19 @@ p {
     font-size: 150%;
 }
 
+/* Hides how to take the quiz after clicking start button */
+.hide {
+    display: none;
+}
+
 /* Button for "Start Quiz" */
 button {
     font-family: 'Architects Daughter', cursive;
     font-family: 'Fredoka One', cursive;
     background-color: black;
-    font-size: 300%;
+    font-size: 200%;
     color: #ffe6ee;
+    margin-left: 2%;
 }
 
 #buttonBody {

@@ -17,25 +17,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-    <!-- Navigation bar for High Score and Time Left -->
-    <div id="nav">
-        <h1>Highscore:</h1>
-        <h1>Time: <span id="timeLeft">0</span></h1>
-    </div>
+<!-- Navigation bar for High Score and Time Left -->
+<div id="nav">
+    <h4 id="showhighscore" class="highscore" onclick="getScore()">Highscores</h4>
+    <h4>Time: <span id="timeLeft">0</span></h4>
+</div>
 
 <body>
     <!-- Coding Quiz Challenge Title -->
     <header class="header">
-        <h2>Coding Quiz</h2>
-    </header>
+        <h2>JavaScript Quiz</h2>
 
-    <!-- How to take the quiz -->
-    <p>Try to answer the following code-related questions within the time limit. <br>
-    Keep in mind that incorrect answers will penalize your scoretime by ten seconds!</p>
+        <!-- How to take the quiz -->
+        <div id="hide2">
+            <p>Try to answer the following code-related questions within the time limit. <br>
+                Keep in mind that incorrect answers will penalize your scoretime by ten seconds!</p>
+        </div>
+    </header>
 
     <!-- Start Button -->
     <div id="buttonBody">
-        <button onclick="start()">Start Quiz!</button>
+        <button onclick="start()">Start Quiz</button>
     </div>
 
     <script src="script.js"></script>

@@ -1,5 +1,6 @@
 // Array of quiz questions, choices and correct answers
-var questions = [{
+var questions = [
+{
     question: 'Commonly used data types DO NOT include:',
     choices: ['Strings()', 'Booleans()', 'Alerts()', 'Numbers()'],
     answer: 'Alerts()'
@@ -24,18 +25,19 @@ var questions = [{
     choices: ['JavaScript()', 'Terminal/Bash()', 'For Loops()', 'Console.log()'],
     answer: 'Console.log()'
     }
-]
+];
 
 // Varibles for functions, scores and timers
 var score = 0;
 var timer;
 var timeLeft = 0;
-var thinkingAnswer = -1;
+var clockRunningAnswer = -1;
+
 
 // The button has an on-click event handler
 function start () {
-
-    timeLeft = 120; // seconds
+    
+    timeLeft = 60; // seconds (1 minute)
     document.getElementById('timeLeft').innerHTML = timeLeft;
 
         // setInterval is a built-in function that will call the given function
@@ -54,4 +56,42 @@ function start () {
     }, 1000);
 
     next();
+}
+
+// Keeps track of score in local storage
+funtion getScore() {
+    localStorage.setItem('highscore', score);
+    localStorage.setItem('highscoreName', document.getElementById('name').value);
+}
+
+// Showing users highscore
+// Adding "Clear Score" and "Play Again" button in quiz body
+function getScore() {
+    var quizQuestions = `
+    <h2>` + localStorage.getItem('highscoreName') + `'s highscore is:</h2>
+    <h1>` + localStorage.getItem('highscore') + `</h1><br>
+
+
+    <button onclick='clearScore()'> Clear Score! </button> <button onclick='resetGame()'> Play Again! ^__^ </button>`;
+
+    document.getElementById('quiz').innerHTML = quizQuestions;
+}
+
+
+
+
+
+
+
+
+
+
+
+// Ends game and stops timer
+function endGame() {
+    clearInterval(timer);
+
+    var stopGame = `
+    <h1>Game Over!</h2>
+
 }
