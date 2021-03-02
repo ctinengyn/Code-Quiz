@@ -11,7 +11,7 @@ body {
     width: 100%;
 }
 
-#h4 {
+h4 {
     font-family: 'Architects Daughter', cursive;
     font-family: 'Fredoka One', cursive; 
     color: #ffe6ee;
@@ -33,7 +33,7 @@ p {
     font-size: 150%;
 }
 
-/* Hides how to take the quiz after clicking start button */
+/* Hides how to take quiz after clicking start button */
 .hide {
     display: none;
 }
