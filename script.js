@@ -77,7 +77,7 @@ function getScore() {
     <h2>` + localStorage.getItem("highscoreName") + `'s highscore is:</h2>
     <h1>` + localStorage.getItem("highscore") + `</h1><br> 
     
-    <button onclick="clearScore()">Clear score!</button><button onclick="resetGame()">Play Again!</button>
+    <button onclick="clearScore()">Clear Score</button><button onclick="resetGame()">Play Again</button>
     
     `;
     
@@ -111,14 +111,14 @@ function next() {
     
     // Answer buttons will be the same style as "Start Quiz"
     for (var buttonLoop = 0; buttonLoop < questions[currentQuestion].choices.length; buttonLoop++) {
-        var buttonCode = "<button onclick=\"[ANS]\">[CHOICE]</button>"; 
+        var buttonCode = "<button onclick=\"[ANSWER]\">[CHOICE]</button>"; 
         buttonCode = buttonCode.replace("[CHOICE]", questions[currentQuestion].choices[buttonLoop]);
     
         // If user selects correct/incorrect answers the button style will remain the same
         if (questions[currentQuestion].choices[buttonLoop] == questions[currentQuestion].answer) {
-            buttonCode = buttonCode.replace("[ANS]", "correct()");
+            buttonCode = buttonCode.replace("[ANSWER]", "correct()");
         } else {
-            buttonCode = buttonCode.replace("[ANS]", "incorrect()");
+            buttonCode = buttonCode.replace("[ANSWER]", "incorrect()");
         }
         quizContent += buttonCode
     }
@@ -145,10 +145,10 @@ function endGame() {
     
     var quizContent = `
     <h2>Game over!</h2>
-    <p>You got a ` + score +  ` /100!</p>
-    <p>That means you got ` + score / 20 +  ` question(s) correct!</p>
-    <input type="text" id="name" placeholder="First name"</input>
-    <button onclick="setScore()">Set score!</button>`;
+    <p>You got a ` + score +  ` /100</p>
+    <p>Scored ` + score / 20 +  ` question(s) correct</p>
+    <input type="text" id="name" placeholder="Name"</input>
+    <button onclick="setScore()">Set Score</button>`;
     
     document.getElementById("buttonBody").innerHTML = quizContent;
     }
