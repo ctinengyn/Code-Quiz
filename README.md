@@ -11,9 +11,13 @@ Test your JavaScript knowlegde with multiple-choice questions!
 
 ### 2. Questions are presented with multiple choice answers
 - If the question is answered correctly, will add 20 points to score
-- if the question is answered wrong, 
+- if the question is answered wrong, timer will deduct 15 seconds
 
-### 3. When all questions are answered or the timeer reaches 0, GAME OVER
+### 3. When all questions are answered or the timer reaches 0, GAME OVER
+
+### 4. When game is over, the user can enter name, click "Set Score" to save high score
+
+### 5. User will have an option to click on "Clear Score" to clear saved score or "Play Again" to start quiz again
 
 ## Below is the Code Quiz demo:
 ### [Code Quiz Link](https://ctinengyn.github.io/Code-Quiz/)

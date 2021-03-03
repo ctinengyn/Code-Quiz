@@ -65,7 +65,7 @@ function start() {
 // Keeps track of score in local storage
 function setScore() {
     localStorage.setItem("highscore", score);
-    localStorage.setItem("highscoreName",  document.getElementById('name').value);
+    localStorage.setItem("highscoreName",  document.getElementById("name").value);
     
     getScore();
 }
@@ -77,9 +77,7 @@ function getScore() {
     <h2>` + localStorage.getItem("highscoreName") + `'s highscore is:</h2>
     <h1>` + localStorage.getItem("highscore") + `</h1><br> 
     
-    <button onclick="clearScore()">Clear Score</button><button onclick="resetGame()">Play Again</button>
-    
-    `;
+    <button onclick="clearScore()">Clear Score</button><button onclick="resetGame()">Play Again</button>`;
     
     document.getElementById("buttonBody").innerHTML = quizContent;
 }  
@@ -118,7 +116,7 @@ function next() {
         if (questions[currentQuestion].choices[buttonLoop] == questions[currentQuestion].answer) {
             buttonCode = buttonCode.replace("[ANSWER]", "correct()");
         } else {
-            buttonCode = buttonCode.replace("[ANSWER]", "incorrect()");
+            buttonCode = buttonCode.replace("[ANSWER]", "incorrect()") 
         }
         quizContent += buttonCode
     }
@@ -136,6 +134,7 @@ function clearScore() {
 
 // Resets the game
 function resetGame() {
+    clearInterval(timerSec);
     window.location.reload()
 }
 
@@ -144,7 +143,7 @@ function endGame() {
     clearInterval(timerSec);
     
     var quizContent = `
-    <h2>Game over!</h2>
+    <h2>Game over</h2>
     <p>You got a ` + score +  ` /100</p>
     <p>Scored ` + score / 20 +  ` question(s) correct</p>
     <input type="text" id="name" placeholder="Name"</input>
